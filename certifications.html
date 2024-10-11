@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Mohan's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f1c40f;
+        }
+        .certifications-bg .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .certifications-bg .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .certifications-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .certifications-section.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="certifications-bg">
+   
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top blur-effect">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mohan's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container text-center my-5 text-light certifications-section" id="certificationsSection">
+        <h1>Certifications</h1>
+        <p>Here are some of the certifications I have earned.</p>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <img src="/WhatsApp Image 2024-10-11 at 18.17.10_94b7d85e.jpg" class="img-fluid mb-3" alt="Certificate 1">
+            </div>
+            <div class="col-md-4">
+                <img src="/Screenshot (266).png" class="img-fluid mb-3" alt="Certificate 2">
+            </div>
+            <div class="col-md-4">
+                <img src="/Screenshot (268).png" class="img-fluid mb-3" alt="Certificate 2">
+            </div>
+           
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+     
+        const certificationsSection = document.getElementById('certificationsSection');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    certificationsSection.classList.add('animate-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(certificationsSection);
+    </script>
+</body>
+</html>
