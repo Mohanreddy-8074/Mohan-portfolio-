@@ -9,28 +9,29 @@
     body {
       background-color: #f8f9fa;
       padding-top: 80px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .resume-container {
+      max-width: 800px;
+      margin: auto;
       text-align: center;
     }
-    .resume-img {
-      max-width: 90%;
+    .resume-preview {
       border: 1px solid #ccc;
       border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .resume-img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: 20px 0;
+      height: 600px;
+      width: 100%;
     }
     .download-btn {
       margin-top: 20px;
-      padding: 10px 20px;
+      padding: 12px 30px;
+      font-size: 1rem;
       font-weight: bold;
       background-color: #f1c40f;
       color: #000;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       transition: background-color 0.3s ease;
     }
     .download-btn:hover {
@@ -41,17 +42,16 @@
 <body>
 
   <div class="container resume-container">
-    <h1>Kasarapu Mohan Reddy</h1>
+    <h1 class="mb-1">Kasarapu Mohan Reddy</h1>
     <h5 class="text-muted">AWS DevOps Engineer</h5>
-    <p>Click the image to view full screen or download below.</p>
+    <p class="mt-3">Click below to view or download my resume.</p>
 
-    <a href="resume.jpg" target="_blank">
-      <img src="resume.jpg" alt="Resume" class="resume-img">
-    </a>
+    <!-- Embedded PDF -->
+    <iframe src="Kasarapu_Mohan_Reddy_CV (4).pdf" class="resume-preview" frameborder="0"></iframe>
 
-    <br>
-    <a href="resume.jpg" download>
-      <button class="download-btn">Download Resume</button>
+    <!-- Download button -->
+    <a href="Kasarapu_Mohan_Reddy_CV (4).pdf" download>
+      <button class="download-btn">📥 Download Resume (PDF)</button>
     </a>
   </div>
 
