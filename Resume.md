@@ -43,14 +43,14 @@
 
   <div class="container resume-container">
     <h1 class="mb-1">Kasarapu Mohan Reddy</h1>
-    <h5 class="text-muted">AWS DevOps Engineer</h5>
-    <p class="mt-3">Click below to view or download my resume.</p>
+    <h5 class="text-muted">Associate Software Engineer</h5>
+    <p class="mt-3">Click below to view or download my Resume.</p>
 
     <!-- Embedded PDF -->
-    <iframe src="Kasarapu_Mohan_Reddy_CV (4).pdf" class="resume-preview" frameborder="0"></iframe>
+    <iframe img="Resume.jpg" class="resume-preview" frameborder="0"></iframe>
 
     <!-- Download button -->
-    <a href="Kasarapu_Mohan_Reddy_CV (4).pdf" download>
+    <a img="Resume.jpg" download>
       <button class="download-btn">📥 Download Resume (PDF)</button>
     </a>
   </div>
